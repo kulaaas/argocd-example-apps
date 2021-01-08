@@ -13,11 +13,11 @@ spec:
       labels:
         app: guestbook-ui
     spec:
-    type: LoadBalancer
-    ports:
-    - port: 80
       containers:
       - image: gcr.io/heptio-images/ks-guestbook-demo:0.2
         name: guestbook-ui
         ports:
         - containerPort: 80
+    type: LoadBalancer
+    ports:
+      - port: 80
